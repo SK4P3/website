@@ -1,0 +1,123 @@
+<div id="box" (scroll)="onScroll($event)" class="parent relative">
+
+  <app-navbar #nav></app-navbar>
+
+  <a id="home"></a>
+  <section class="relative h-screen w-screen bg-neutral-900">
+    <img src="assets/alex.png" class="absolute right-0 h-screen object-cover">
+    <div class="absolute top-0 left-0 h-screen w-screen flex flex-col justify-center">
+      <div class="flex flex-col gap-6 pl-20  text-white">
+        <h1 class="text-3xl -mb-6 font-semibold uppercase">Hello i am Alex</h1>
+        <h2 class="text-[3rem] font-bold uppercase">I'm a software developer</h2>
+        <div class="-mt-4 w-full font-medium">
+          <h3 class="">Here you can find my projects and general information about me! I've hidden 3 cookies on </h3>
+          <p>the website, maybe you can find them :)</p>
+        </div>
+        <div class="mt-12 flex gap-8 uppercase">
+          <app-slide-button text="my work" href="#projects"></app-slide-button>
+          <app-slide-button text="get in touch" href="#contact"></app-slide-button>
+        </div>
+      </div>
+    </div>
+    <img src="assets/cookie2.png" class="absolute top-0 left-0 h-0 w-0">
+  </section>
+
+
+  <a id="about"></a>
+  <section class="relative h-screen w-screen bg-neutral-900 z-20">
+
+    <!-- timeline -->
+
+    <div class="absolute top-64 left-5 sm:left-[10vw]">
+      <div class="relative h-[88vh] ">
+        <div class="absolute top-3 left-[7px] bg-white h-full w-[2px]"></div>
+
+        <div class="absolute top-[00%] -mt-[4px] -left-28 w-28 text-white font-bold">2018 - 2019</div>
+        <div class="absolute top-[00%] left-0 bg-white rounded-full h-4 w-4"></div>
+        <div
+          class="absolute top-[00%] -mt-16 left-8 bg-transparent rounded-md h-36 w-96 flex items-center justify-center font-bold text-2xl text-white text-center">
+          Exchange Year in <br /> San Diego, California
+        </div>
+
+        <div class="absolute top-[30%] -mt-[4px] -left-28 w-28 text-white font-bold">2019 - 2021</div>
+        <div class="absolute top-[30%] left-0 bg-white rounded-full h-4 w-4"></div>
+        <div
+          class="absolute top-[30%] -mt-16 left-8 bg-transparent rounded-md h-36 w-96 flex items-center justify-center font-bold text-2xl text-white text-center">
+          Started college at 16 <br /> Graduated high school
+        </div>
+
+
+        <div class="absolute top-[60%] -mt-[4px] -left-28 w-28 text-white font-bold">2019 - 2023</div>
+        <div class="absolute top-[60%] left-0 bg-white rounded-full h-4 w-4"></div>
+        <div
+          class="absolute top-[60%] -mt-16 left-8 bg-transparent rounded-md h-36 w-96 flex items-center justify-center font-bold text-2xl text-white text-center">
+          Bachelor in CS / Economics <br /> at AAU / ETHZ
+        </div>
+
+        <div class="absolute top-[100%] -mt-[4px] -left-28 w-28 text-white font-bold">2022 - now</div>
+        <div class="absolute top-[100%] left-0 bg-white rounded-full h-4 w-4"></div>
+        <div
+          class="absolute top-[100%] -mt-6 left-8h-14 w-[80vw] flex items-center justify-center font-bold text-2xl text-white text-center">
+          Projects /
+          <a href="https://www.ss-technologies.at" target="_blank" class="pl-2 hover:underline">S&S Technologies
+            GmbH</a>
+        </div>
+        <!-- <div
+          class="absolute top-[100%] -mt-16 left-8 bg-transparent rounded-md h-36 w-96 flex items-center justify-center font-bold text-2xl text-white text-center">
+          <div class="flex flex-col">
+            <span>Co-Founder of</span>
+            <a href="https://www.ss-technologies.at" target="_blank" class="pl-2 hover:underline">
+              S&S Technologies GmbH
+            </a>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+    <div class="hidden sm:block ">
+      <div class="absolute top-0 right-0 w-screen h-screen grid grid-cols-3">
+        <div></div>
+        <div class="flex flex-col justify-center w-full col-span-2 font-medium">
+          <div class="text-white text-center px-20 text-[6rem]">i'm currently</div>
+          <div class="text-white text-center px-20 text-[6rem]">{{age}} Seconds</div>
+          <div class="text-white text-center px-20 text-[6rem]">old</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a id="projects"></a>
+  <section class="relative h-screen w-screen bg-neutral-900">
+    <div class="absolute top-[20vh] w-screen h-[75vh] flex items-center justify-center">
+      <div class="grid grid-cols-4 gap-8 w-full h-full">
+        <div class="w-full h-full bg-black rounded-md"></div>
+        <div class="w-full h-full bg-black rounded-md col-span-2 "></div>
+        <div class="w-full h-full bg-black rounded-md"></div>
+      </div>
+    </div>
+  </section>
+
+  <a id="contact"></a>
+  <section class="relative h-screen w-screen bg-neutral-900">
+
+    <div class="absolute top-0 h-[92vh] w-screen flex flex-col sm:flex-row items-center justify-center gap-8">
+      <a class="w-72 h-28 sm:h-48 bg-[#0077b7] rounded-md" target="_blank"
+        href="https://at.linkedin.com/in/alexander-schnabl-b5508216a">
+        <img src="assets/socials/linkedin.png" class="h-full w-full object-contain">
+      </a>
+      <a class="w-72 h-28 sm:h-48 bg-[#5865f2] rounded-md" target="_blank"
+        href="https://discordapp.com/users/415490584665522177">
+        <img src="assets/socials/discord.png" class="h-full w-full object-contain">
+      </a>
+      <a class="w-72 h-28 sm:h-48 bg-[#29a9eb] rounded-md" target="_blank" href="https://t.me/botlx">
+        <img src="assets/socials/telegram.png" class="h-full w-full object-contain">
+      </a>
+      <a class="w-72 h-28 sm:h-48 bg-gradient-to-b from-[#5770ff] to-[#70edff] rounded-md" target="_blank"
+        href="mailto:alexander.schnabl@ss-technologies.at">
+        <img src="assets/socials/mail.png" class="h-full w-full object-contain">
+      </a>
+    </div>
+    <app-footer></app-footer>
+  </section>
+  <div class="h-12 w-screen "></div>
+</div>

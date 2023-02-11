@@ -1,0 +1,14 @@
+
+.hovereffect:hover {
+  animation: slide 1s forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-0%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
