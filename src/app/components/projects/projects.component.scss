@@ -1,0 +1,8 @@
+.imagecard {
+  transition: 1s;
+}
+
+.imagecard:hover {
+  transform-origin: center;
+  scale: 1.1;
+}

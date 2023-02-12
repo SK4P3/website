@@ -4,6 +4,7 @@ import { delay } from 'rxjs';
 interface ProjectNode {
   prev: ProjectNode | undefined;
   src: string;
+  href: string;
   next: ProjectNode | undefined;
 }
 
@@ -14,20 +15,20 @@ interface ProjectNode {
 })
 export class ProjectsComponent implements OnInit {
 
-  // rechnung, claudia, dr schuster
-
   gallery!: any;
   galleryBg!: any;
 
-  projectNode1: ProjectNode = { prev: undefined, src: "assets/projects/karl.png", next: undefined }
-  projectNode2: ProjectNode = { prev: undefined, src: "assets/projects/pewny.png", next: undefined }
-  projectNode3: ProjectNode = { prev: undefined, src: "assets/projects/schuster.png", next: undefined }
-  projectNode4: ProjectNode = { prev: undefined, src: "assets/projects/rechnung.png", next: undefined }
-  projectNode5: ProjectNode = { prev: undefined, src: "assets/projects/sus.png", next: undefined }
+  projectNode1: ProjectNode = { prev: undefined, src: "assets/projects/karl.jpg", href: "https://www.karlschnabl.at/", next: undefined };
+  projectNode2: ProjectNode = { prev: undefined, src: "assets/projects/pewny.jpg", href: "https://www.claudia-pewny.at/", next: undefined };
+  projectNode3: ProjectNode = { prev: undefined, src: "assets/projects/schuster.jpg", href: "https://www.drschuster.at/", next: undefined };
+  projectNode4: ProjectNode = { prev: undefined, src: "assets/projects/rechnung.jpg", href: "https://www.rechnung-schreiben.com/", next: undefined };
+  projectNode5: ProjectNode = { prev: undefined, src: "assets/projects/sus.jpg", href: "https://www.ss-technologies.at/", next: undefined };
 
+  projects!: ProjectNode[];
   currentProject!: ProjectNode;
 
   constructor() {
+    this.projects = [this.projectNode1, this.projectNode2, this.projectNode3, this.projectNode4, this.projectNode5];
 
     this.projectNode1.prev = this.projectNode5;
     this.projectNode1.next = this.projectNode2;

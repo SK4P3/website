@@ -9,6 +9,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     LandingComponent,
     ImprintComponent,
     ProjectsComponent,
+    HeaderComponent,
+    TimelineComponent,
+    ContactComponent,
 
   ],
   imports: [

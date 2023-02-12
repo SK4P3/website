@@ -1,43 +1,52 @@
 <section class="relative h-screen w-screen bg-neutral-900">
-  <div id="galleryBg" class="absolute top-0 -left-[100vw] flex w-[300vw] h-screen overflow-hidden">
-    <div class="w-screen h-screen">
-      <img src="{{currentProject.prev!.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
+  <div class="hidden sm:block">
+    <div id="galleryBg" class="absolute top-0 -left-[100vw] flex w-[300vw] h-screen overflow-hidden">
+      <div class="w-screen h-screen">
+        <img src="{{currentProject.prev!.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
+      </div>
+      <div class="w-screen h-screen">
+        <img src="{{currentProject.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
+      </div>
+      <div class="w-screen h-screen">
+        <img src="{{currentProject.next!.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
+      </div>
     </div>
-    <div class="w-screen h-screen">
-      <img src="{{currentProject.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
-    </div>
-    <div class="w-screen h-screen">
-      <img src="{{currentProject.next!.src}}" alt="" class="w-full h-full blur-sm brightness-50" />
+
+    <div class="absolute top-[20vh] w-screen h-[75vh] flex items-center justify-center ">
+      <div id="gallery" class="flex w-[290vw] h-[28vw] gap-[10vw]">
+
+        <div class="w-[50vw] h-11/12">
+          <img src="{{currentProject.prev!.prev!.src}}" alt=""
+            class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
+        </div>
+
+        <div class="w-[50vw] h-11/12" (click)="moveLeft()">
+          <img src="{{currentProject.prev!.src}}" alt=""
+            class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
+        </div>
+
+        <a class="w-[50vw] h-11/12" href="{{currentProject.href}}" target="_blank">
+          <img src="{{currentProject.src}}" alt="" class="object-cover w-full h-full" />
+        </a>
+
+        <div class="w-[50vw] h-11/12" (click)="moveRight()">
+          <img src="{{currentProject.next!.src}}" alt=""
+            class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
+        </div>
+
+        <div class="w-[50vw] h-11/12">
+          <img src="{{currentProject.next!.next!.src}}" alt=""
+            class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="absolute top-[20vh] w-screen h-[75vh] flex items-center justify-center ">
-    <div id="gallery" class="flex w-[290vw] h-[28vw] gap-[10vw]">
-
-      <div class="w-[50vw] h-11/12">
-        <img src="{{currentProject.prev!.prev!.src}}" alt=""
-          class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
-      </div>
-
-      <div class="w-[50vw] h-11/12" (click)="moveLeft()">
-        <img src="{{currentProject.prev!.src}}" alt=""
-          class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
-      </div>
-
-      <div class="w-[50vw] h-11/12">
-        <img src="{{currentProject.src}}" alt="" class="object-cover w-full h-full" />
-      </div>
-
-      <div class="w-[50vw] h-11/12" (click)="moveRight()">
-        <img src="{{currentProject.next!.src}}" alt=""
-          class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
-      </div>
-
-      <div class="w-[50vw] h-11/12">
-        <img src="{{currentProject.next!.next!.src}}" alt=""
-          class="object-cover w-full h-full brightness-50 hover:brightness-100 transition duration-300 ease-in-out" />
-      </div>
+  <div class="block sm:hidden">
+    <div class="absolute top-[27vh] w-screen h-[70vh] grid grid-rows-5 gap-4 justify-items-center">
+      <a *ngFor="let project of projects" class="w-[90vw] h-full rounded-md overflow-hidden imagecard"
+        href="{{project.href}}" target="_blank">
+        <img src="{{project.src}}" class="w-full h-full object-cover">
+      </a>
     </div>
   </div>
-
 </section>
