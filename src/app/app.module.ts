@@ -8,6 +8,7 @@ import { SlideButtonComponent } from './components/slide-button/slide-button.com
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
     FooterComponent,
     LandingComponent,
     ImprintComponent,
+    ProjectsComponent,
 
   ],
   imports: [
