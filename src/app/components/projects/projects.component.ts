@@ -14,16 +14,16 @@ interface ProjectNode {
 })
 export class ProjectsComponent implements OnInit {
 
-  // ss, karl, rechnung, claudia, dr schuster
+  // rechnung, claudia, dr schuster
 
   gallery!: any;
   galleryBg!: any;
 
-  projectNode1: ProjectNode = { prev: undefined, src: "https://source.unsplash.com/Z8dtTatMVMw", next: undefined }
-  projectNode2: ProjectNode = { prev: undefined, src: "https://source.unsplash.com/9dmycbFE7mQ", next: undefined }
-  projectNode3: ProjectNode = { prev: undefined, src: "https://source.unsplash.com/m7K4KzL5aQ8", next: undefined }
-  projectNode4: ProjectNode = { prev: undefined, src: "https://images.unsplash.com/photo-1675908057439-887286e7fe0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80", next: undefined }
-  projectNode5: ProjectNode = { prev: undefined, src: "https://images.unsplash.com/photo-1676113462184-ccbf85282eed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", next: undefined }
+  projectNode1: ProjectNode = { prev: undefined, src: "assets/projects/karl.png", next: undefined }
+  projectNode2: ProjectNode = { prev: undefined, src: "assets/projects/pewny.png", next: undefined }
+  projectNode3: ProjectNode = { prev: undefined, src: "assets/projects/schuster.png", next: undefined }
+  projectNode4: ProjectNode = { prev: undefined, src: "assets/projects/rechnung.png", next: undefined }
+  projectNode5: ProjectNode = { prev: undefined, src: "assets/projects/sus.png", next: undefined }
 
   currentProject!: ProjectNode;
 
